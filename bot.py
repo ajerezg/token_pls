@@ -33,10 +33,17 @@ def command_getTokenPrice(m): # Definimos una función que resuleva lo que neces
     bot.send_message( cid, tokenNAprice) # Con la función 'send_message()' del bot, enviamos al ID almacenado el texto que queremos.
     
 @bot.message_handler(commands=['jorge_di_lo_tuyo'])
-def command_getjorgepls(m): # Definimos una función que resuleva lo que necesitemos.
+def command_getjorge1pls(m): # Definimos una función que resuleva lo que necesitemos.
     cid = m.chat.id # Guardamos el ID de la conversación para poder responder.cid
     #bot.send_message( cid, "") # Con la función 'send_message()' del bot, enviamos al ID almacenado el texto que queremos.
-    sti = open('jorgesticker.webp', 'rb')
+    sti = open('./stickers/jorgesticker1.webp', 'rb')
+    bot.send_sticker(cid, sti)
+
+@bot.message_handler(commands=['que_hacemos_ahora'])
+def command_getedo1pls(m): # Definimos una función que resuleva lo que necesitemos.
+    cid = m.chat.id # Guardamos el ID de la conversación para poder responder.cid
+    #bot.send_message( cid, "") # Con la función 'send_message()' del bot, enviamos al ID almacenado el texto que queremos.
+    sti = open('./stickers/edosticker1.webp', 'rb')
     bot.send_sticker(cid, sti)
 
 #############################################
